@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "ep-hw1"
+version = "0.1.0"
+description = ""
+authors = ["Julia Belova <rollineea@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "^1.26.2"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.11.0"
+flake8 = "^6.1.0"
+pylint = "^3.0.2"
+isort = "^5.12.0"
+
+[tool.black]
+line-length = 92
+exclude = '''^/ep_hw1/life_game_initial\.py'''
+
+[tool.pylint."FORMAT"]
+max-line-length = 80
+
+[tool.pylint."MASTER"]
+ignore = "life_game_initial.py"
+
+[tool.isort]
+skip = "life_game_initial.py"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
